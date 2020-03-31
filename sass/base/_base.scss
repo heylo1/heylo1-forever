@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html{
+	//Define what 1rem is(by defeault 10px)
+	font-size: 62.5%;
+
+	
+
+	@include respond(tab-land){
+		font-size: 56.25%; //1rem = 9px
+	}
+
+	@include respond(tab-port){
+		font-size: 50%; //1rem = 8px
+	}
+
+	@include respond(big-desktop){
+		font-size: 75%; //1rem - 12px
+	}
+
+}
+
+a:link,
+a:visited{
+	text-decoration: none;
+	color: $color-primary;
+}
+a:hover{
+	color:$color-primary-dark;
+}
+
+#l1{
+	position: absolute;
+	top:85vh;
+}
